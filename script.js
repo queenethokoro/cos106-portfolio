@@ -296,36 +296,99 @@ function closeProjectModal() {
     if (modal) modal.style.display = "none";
 }
 // =========================================================
-// 4. DARK / LIGHT THEME SWITCHER (With LocalStorage Memory)
+// 4. ORGANIZED MOBILE HEADER, HAMBURGER MENU & RICH FOOTER
 // =========================================================
-function initThemeSwitcher() {
+function initModernUI() {
+    const navbar = document.querySelector(".navbar");
     const navLinks = document.querySelector(".nav-links");
-    if (!navLinks) return;
 
-    // Create the button automatically in the navbar on all 5 pages
-    const li = document.createElement("li");
-    const themeBtn = document.createElement("button");
-    themeBtn.className = "theme-toggle-btn";
-    themeBtn.id = "themeToggleBtn";
-    li.appendChild(themeBtn);
-    navLinks.appendChild(li);
+    if (navbar && navLinks) {
+        // 1. Create right-side circular buttons (Theme Toggle + Hamburger Menu)
+        const navControls = document.createElement("div");
+        navControls.className = "nav-controls";
 
-    // Check if user previously picked Dark Mode
-    const savedTheme = localStorage.getItem("queeneth_theme");
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        themeBtn.innerHTML = "☀️ Light";
-    } else {
-        themeBtn.innerHTML = "🌙 Dark";
+        const themeBtn = document.createElement("button");
+        themeBtn.className = "circle-icon-btn";
+        themeBtn.id = "themeToggleBtn";
+        themeBtn.title = "Switch Theme";
+
+        const menuBtn = document.createElement("button");
+        menuBtn.className = "circle-icon-btn mobile-menu-btn";
+        menuBtn.id = "mobileMenuBtn";
+        menuBtn.innerHTML = "&#9776;"; // ☰ Hamburger icon
+        menuBtn.title = "Toggle Menu";
+
+        navControls.appendChild(themeBtn);
+        navControls.appendChild(menuBtn);
+        navbar.appendChild(navControls);
+
+        // 2. Theme Switcher Logic with LocalStorage
+        const savedTheme = localStorage.getItem("queeneth_theme");
+        if (savedTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            themeBtn.innerHTML = "☀️";
+        } else {
+            themeBtn.innerHTML = "🌙";
+        }
+
+        themeBtn.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            const isDark = document.body.classList.contains("dark-mode");
+            localStorage.setItem("queeneth_theme", isDark ? "dark" : "light");
+            themeBtn.innerHTML = isDark ? "☀️" : "🌙";
+        });
+
+        // 3. Mobile Hamburger Dropdown Logic
+        menuBtn.addEventListener("click", function(e) {
+            e.stopPropagation();
+            navLinks.classList.toggle("mobile-open");
+            menuBtn.innerHTML = navLinks.classList.contains("mobile-open") ? "&times;" : "&#9776;";
+        });
+
+        // Close dropdown when tapping anywhere outside
+        document.addEventListener("click", function(e) {
+            if (!navbar.contains(e.target)) {
+                navLinks.classList.remove("mobile-open");
+                menuBtn.innerHTML = "&#9776;";
+            }
+        });
     }
 
-    // Toggle theme on click and save preference
-    themeBtn.addEventListener("click", function() {
-        document.body.classList.toggle("dark-mode");
-        const isDark = document.body.classList.contains("dark-mode");
-        localStorage.setItem("queeneth_theme", isDark ? "dark" : "light");
-        themeBtn.innerHTML = isDark ? "☀️ Light" : "🌙 Dark";
-    });
+    // 4. Upgrade Footer to Rich Multi-Section Layout on All 5 Pages
+    const footer = document.querySelector("footer");
+    if (footer) {
+        footer.innerHTML = `
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h3>Queeneth Okoro</h3>
+                    <p>Bridging Data Science, Product Design, and EdTech Through Innovation.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick links</h4>
+                    <div class="footer-circle-links">
+                        <a href="index.html" title="Home">🏠</a>
+                        <a href="about.html" title="About Me">👤</a>
+                        <a href="projects.html" title="Projects">📁</a>
+                        <a href="planner.html" title="Academic Planner">📅</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-circle-links">
+                        <a href="https://www.linkedin.com/in/queeneth-oboh-152464207/" target="_blank" title="LinkedIn">in</a>
+                        <a href="mailto:queenethoboh@gmail.com" title="Email">✉️</a>
+                        <a href="contact.html" title="Contact Form">📞</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Queeneth Okoro. All Rights Reserved | COS 106 Term Project</p>
+                </div>
+            </div>
+        `;
+    }
 }
 
-initThemeSwitcher();
+initModernUI();
