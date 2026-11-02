@@ -1484,3 +1484,51 @@ footer {
         color: #fbc02d !important;
     }
 }
+/* =========================================================
+   13. MOBILE PILL SHAPE, NO TAP BOX & ANTI-FLASH FIX
+   ========================================================= */
+
+/* Removes the ugly blue/gray square box when tapping on mobile phones */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus, button:focus {
+    outline: none;
+}
+
+/* Sets root html background to dark when Dark Mode is active (prevents white flash) */
+html.dark-mode-html,
+html.dark-mode-html body {
+    background-color: #0b1120 !important;
+}
+
+@media (max-width: 850px) {
+    /* Clean link spacing inside the hamburger dropdown */
+    .nav-links a {
+        display: inline-block !important;
+        padding: 10px 22px !important;
+        border-radius: 30px !important; /* Rounded pill shape */
+        border-bottom: none !important; /* Removes the underline */
+        font-weight: 600 !important;
+        transition: background 0.2s ease, transform 0.15s ease !important;
+    }
+
+    /* Active or tapped link uses the exact rounded pill shape */
+    .nav-links a.active,
+    .nav-links a:active {
+        background: var(--royal-indigo) !important;
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        border-bottom: none !important;
+        box-shadow: 0 4px 12px rgba(30, 42, 120, 0.2) !important;
+    }
+
+    /* Gold pill shape in Dark Mode (matches your screenshot!) */
+    body.dark-mode .nav-links a.active,
+    body.dark-mode .nav-links a:active {
+        background: var(--gold-gradient) !important;
+        color: #0f172a !important;
+        box-shadow: 0 4px 12px rgba(251, 192, 45, 0.25) !important;
+    }
+}

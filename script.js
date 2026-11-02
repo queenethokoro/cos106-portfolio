@@ -322,9 +322,10 @@ function initModernUI() {
         navControls.appendChild(menuBtn);
         navbar.appendChild(navControls);
 
-        // 2. Theme Switcher Logic with LocalStorage
+        // 2. Theme Switcher Logic with LocalStorage & Flash Prevention
         const savedTheme = localStorage.getItem("queeneth_theme");
         if (savedTheme === "dark") {
+            document.documentElement.classList.add("dark-mode-html");
             document.body.classList.add("dark-mode");
             themeBtn.innerHTML = "☀️";
         } else {
@@ -333,6 +334,7 @@ function initModernUI() {
 
         themeBtn.addEventListener("click", function() {
             document.body.classList.toggle("dark-mode");
+            document.documentElement.classList.toggle("dark-mode-html");
             const isDark = document.body.classList.contains("dark-mode");
             localStorage.setItem("queeneth_theme", isDark ? "dark" : "light");
             themeBtn.innerHTML = isDark ? "☀️" : "🌙";
