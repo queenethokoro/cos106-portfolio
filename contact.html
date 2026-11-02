@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Queeneth Okoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION MENU -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-badge">QO</span>
+                <span class="logo-text">Queeneth<span class="gold-dot">.</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="planner.html">Academic Planner</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTACT CONTENT -->
+    <main class="page-container">
+        <h1>Get in Touch</h1>
+        <p class="subtitle">Have a question, academic inquiry, or want to collaborate on a Data Science or Product Design project? Reach out below.</p>
+
+        <div class="contact-grid">
+            
+            <!-- Left Column: Direct CV Contact Info -->
+            <section class="content-card contact-info-card" style="margin-bottom: 0;">
+                <h2>Contact Information</h2>
+                <p class="contact-intro">
+                    Feel free to connect with me directly via email, phone, or LinkedIn, or send a quick message using the form.
+                </p>
+
+                <ul class="clean-block-list">
+                    <li>
+                        <strong>📍 Location</strong>
+                        <span>Lagos, Nigeria</span>
+                    </li>
+                    <li>
+                        <strong>📧 Email Address</strong>
+                        <span><a href="mailto:queenethoboh@gmail.com" class="contact-link">queenethoboh@gmail.com</a></span>
+                    </li>
+                    <li>
+                        <strong>📞 Phone Numbers</strong>
+                        <span>+234 706 777 0472 &bull; +234 701 223 9391</span>
+                    </li>
+                    <li>
+                        <strong>💼 LinkedIn Profile</strong>
+                        <span>
+                            <a href="https://www.linkedin.com/in/queeneth-oboh-152464207/" target="_blank" class="contact-link">
+                                linkedin.com/in/queeneth-oboh-152464207 ↗
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Right Column: Validated Contact Form (COS 106 Requirement) -->
+            <section class="content-card" style="margin-bottom: 0;">
+                <h2>Send a Message</h2>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="e.g., name@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Digits only)</label>
+                        <input type="text" id="phone" placeholder="e.g., 08012345678">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="Write your message here..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    <div id="formFeedback" class="feedback-msg"></div>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Queeneth Okoro | COS 106 Term Project - Miva Open University</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

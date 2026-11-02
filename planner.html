@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Workspace | Queeneth Okoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION MENU -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-badge">QO</span>
+                <span class="logo-text">Queeneth.</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="planner.html" class="active">Academic Planner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- NOTION-STYLE ACADEMIC WORKSPACE -->
+    <main class="page-container">
+        <div class="notion-header">
+            <span class="notion-icon">🗂️</span>
+            <div>
+                <h1>Academic &amp; Study Workspace</h1>
+                <p class="subtitle" style="margin-bottom: 0;">Track coursework, weekly study targets, and certification milestones in one organized database.</p>
+            </div>
+        </div>
+
+        <!-- Quick Stats Bar -->
+        <div class="notion-stats">
+            <div class="stat-box">
+                <span class="stat-label">Total Tasks</span>
+                <strong id="totalCount">0</strong>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">In Progress</span>
+                <strong id="pendingCount" style="color: #e76f51;">0</strong>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Completed</span>
+                <strong id="completedCount" style="color: #2a9d8f;">0</strong>
+            </div>
+        </div>
+
+        <!-- Database Container -->
+        <section class="content-card notion-board">
+            
+            <!-- 1. Add New Task Bar (With Week Property!) -->
+            <div class="notion-creator">
+                <input type="text" id="taskInput" placeholder="+ Type a new task or assignment title...">
+                
+                <select id="taskCategory">
+                    <option value="Miva Coursework">🎓 Miva Coursework</option>
+                    <option value="Study Group">🤝 Study Group</option>
+                    <option value="Data & Code">💻 Data &amp; Code</option>
+                    <option value="Certifications">📜 Certifications</option>
+                </select>
+
+                <select id="taskWeek">
+                    <option value="Week 1">🗓️ Week 1</option>
+                    <option value="Week 2">🗓️ Week 2</option>
+                    <option value="Week 3">🗓️ Week 3</option>
+                    <option value="Week 4">🗓️ Week 4</option>
+                    <option value="Week 5">🗓️ Week 5</option>
+                    <option value="Week 6">🗓️ Week 6</option>
+                    <option value="Week 7">🗓️ Week 7</option>
+                    <option value="Week 8">🗓️ Week 8</option>
+                    <option value="Week 9">🗓️ Week 9</option>
+                    <option value="Week 10">🗓️ Week 10</option>
+                    <option value="Week 11">🗓️ Week 11</option>
+                    <option value="Week 12">🗓️ Week 12</option>
+                </select>
+
+                <select id="taskPriority">
+                    <option value="High">🔥 High Priority</option>
+                    <option value="Medium" selected>⚡ Medium</option>
+                    <option value="Low">🌱 Low</option>
+                </select>
+
+                <input type="date" id="taskDate">
+
+                <button id="addTaskBtn" class="btn">+ New Task</button>
+            </div>
+
+            <!-- 2. Notion Property Filter Bar (Filter by Category, Week, Priority, Due Date, Status) -->
+            <div class="notion-filter-bar">
+                <span class="filter-title">⚡ Filter by Property:</span>
+
+                <select id="filterCategory" onchange="applyNotionFilters()">
+                    <option value="all">Category: All</option>
+                    <option value="Miva Coursework">Miva Coursework</option>
+                    <option value="Study Group">Study Group</option>
+                    <option value="Data & Code">Data &amp; Code</option>
+                    <option value="Certifications">Certifications</option>
+                </select>
+
+                <select id="filterWeek" onchange="applyNotionFilters()">
+                    <option value="all">Week: All</option>
+                    <option value="Week 1">Week 1</option>
+                    <option value="Week 2">Week 2</option>
+                    <option value="Week 3">Week 3</option>
+                    <option value="Week 4">Week 4</option>
+                    <option value="Week 5">Week 5</option>
+                    <option value="Week 6">Week 6</option>
+                    <option value="Week 7">Week 7</option>
+                    <option value="Week 8">Week 8</option>
+                    <option value="Week 9">Week 9</option>
+                    <option value="Week 10">Week 10</option>
+                    <option value="Week 11">Week 11</option>
+                    <option value="Week 12">Week 12</option>
+                </select>
+
+                <select id="filterPriority" onchange="applyNotionFilters()">
+                    <option value="all">Priority: All</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+
+                <select id="filterStatus" onchange="applyNotionFilters()">
+                    <option value="all">Status: All</option>
+                    <option value="pending">In Progress</option>
+                    <option value="completed">Done</option>
+                </select>
+
+                <input type="date" id="filterDate" onchange="applyNotionFilters()" title="Filter by Due Date">
+
+                <button class="reset-filter-btn" onclick="resetNotionFilters()">Reset Filters</button>
+            </div>
+
+            <!-- 3. Notion Database Table -->
+            <div class="notion-table-wrapper">
+                <table class="notion-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 45px;">Done</th>
+                            <th>Task Title</th>
+                            <th>Category</th>
+                            <th>Week</th>
+                            <th>Priority</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th style="text-align: right;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskList">
+                        <!-- JavaScript dynamically inserts Notion rows here -->
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Queeneth Okoro | COS 106 Term Project - Miva Open University</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

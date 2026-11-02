@@ -1,0 +1,1124 @@
+/* =========================================================
+   SOPHISTICATED FEMININE UI SYSTEM (Complete & Aligned)
+   Colors: Royal Indigo, Soft Powder Blue, Elegant Gold, Cream
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+    --royal-indigo: #1e2a78;
+    --indigo-hover: #141c54;
+    --powder-blue: #e3f2fd;
+    --soft-cream: #f4f6fc;
+    --gold: #fbc02d;
+    --gold-hover: #f57f17;
+    --dark-neutral: #0f172a;
+    --medium-neutral: #475569;
+    --card-bg: #ffffff;
+    --gold-gradient: linear-gradient(135deg, #fbc02d, #f57f17);
+}
+
+body {
+    background: linear-gradient(135deg, var(--soft-cream) 0%, #ffffff 100%);
+    color: var(--dark-neutral);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================================
+   1. NAVIGATION BAR & LOGO
+   ========================================================= */
+header {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(30, 42, 120, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 16px 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--royal-indigo);
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.logo-badge {
+    background: var(--gold-gradient);
+    color: var(--royal-indigo);
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 6px 11px;
+    border-radius: 50% 50% 50% 12%;
+    box-shadow: 0 4px 10px rgba(245, 127, 23, 0.25);
+    display: inline-block;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--royal-indigo);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--medium-neutral);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--powder-blue);
+    color: var(--royal-indigo);
+}
+
+.nav-links a.active {
+    background: var(--royal-indigo);
+    color: white;
+    box-shadow: 0 4px 12px rgba(30, 42, 120, 0.18);
+}
+
+/* =========================================================
+   2. HOMEPAGE HERO SECTION
+   ========================================================= */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 0 24px;
+    gap: 48px;
+}
+
+.hero-text {
+    flex: 1.2;
+}
+
+.role-tag {
+    display: inline-block;
+    background-color: var(--powder-blue);
+    color: var(--royal-indigo);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 7px 16px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.hero-text h1 {
+    color: var(--royal-indigo);
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+.hero-text h3 {
+    color: var(--medium-neutral);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: var(--medium-neutral);
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 26px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--royal-indigo);
+    color: white !important;
+    padding: 12px 26px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(30, 42, 120, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--indigo-hover);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 2px solid var(--royal-indigo);
+    color: var(--royal-indigo);
+    padding: 10px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--powder-blue);
+}
+
+.hero-image {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid var(--gold);
+    box-shadow: 0 12px 30px rgba(30, 42, 120, 0.15);
+    background-color: white;
+}
+
+/* =========================================================
+   3. PAGE CONTAINERS, CARDS & ALIGNED TABLES
+   ========================================================= */
+.page-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.page-container h1 {
+    color: var(--royal-indigo);
+    font-size: 2.1rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: var(--medium-neutral);
+    font-size: 1rem;
+    margin-top: 6px;
+    margin-bottom: 30px;
+}
+
+.content-card {
+    background: var(--card-bg);
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(30, 42, 120, 0.05);
+    border: 1px solid rgba(30, 42, 120, 0.06);
+    margin-bottom: 28px;
+    overflow-x: auto; /* Keeps tables mobile-friendly */
+}
+
+.content-card h2 {
+    color: var(--royal-indigo);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    border-bottom: 2px solid var(--powder-blue);
+    padding-bottom: 10px;
+}
+
+/* Fixed Table Alignment (Left-Aligned Headers & Columns) */
+.info-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    min-width: 550px;
+}
+
+.info-table th {
+    text-align: left; /* Fixes centered header misalignment! */
+    color: var(--medium-neutral);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 10px 18px;
+}
+
+.info-table td {
+    text-align: left;
+    padding: 15px 18px;
+    background-color: var(--soft-cream);
+    font-size: 0.94rem;
+    color: var(--dark-neutral);
+    vertical-align: middle;
+}
+
+.info-table td:first-child {
+    border-radius: 10px 0 0 10px;
+    font-weight: 600;
+    color: var(--royal-indigo);
+    width: 48%;
+}
+
+.info-table td:nth-child(2) {
+    width: 34%;
+}
+
+.info-table td:last-child {
+    border-radius: 0 10px 10px 0;
+    width: 18%;
+    white-space: nowrap;
+}
+
+.info-table tbody tr:hover td {
+    background-color: var(--powder-blue);
+    color: var(--royal-indigo);
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.clean-block-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.clean-block-list li {
+    background-color: var(--soft-cream);
+    padding: 15px 18px;
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+}
+
+.clean-block-list li strong {
+    display: block;
+    color: var(--royal-indigo);
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.clean-block-list li span {
+    color: var(--medium-neutral);
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   4. PROJECTS GRID & HIDDEN POPUP MODAL
+   ========================================================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(30, 42, 120, 0.05);
+    border: 1px solid rgba(30, 42, 120, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(30, 42, 120, 0.12);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(30, 42, 120, 0.06);
+}
+
+.project-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-org {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gold-hover);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.project-info h3 {
+    color: var(--royal-indigo);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: var(--medium-neutral);
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.tech-tags span {
+    background: var(--powder-blue);
+    color: var(--royal-indigo);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.btn-small {
+    flex: 1;
+    text-align: center;
+    padding: 10px 14px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: var(--royal-indigo);
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.btn-small:hover {
+    background: var(--indigo-hover);
+}
+
+.btn-secondary {
+    background: var(--soft-cream);
+    color: var(--royal-indigo);
+}
+
+.btn-secondary:hover {
+    background: var(--powder-blue);
+}
+
+/* Fixed Modal Overlay (Hidden until clicked!) */
+.modal-overlay {
+    display: none; /* Hides the modal box until Case Study is clicked */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-box {
+    background: white;
+    max-width: 540px;
+    width: 100%;
+    padding: 32px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(30, 42, 120, 0.25);
+}
+
+.close-modal {
+    position: absolute;
+    top: 16px;
+    right: 22px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--medium-neutral);
+}
+
+.modal-highlight {
+    background: var(--powder-blue);
+    border-left: 4px solid var(--gold);
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-top: 12px;
+    color: var(--royal-indigo);
+}
+
+/* =========================================================
+   5. NOTION ACADEMIC PLANNER (Aligned Stats, Filters & Badges)
+   ========================================================= */
+.notion-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.notion-icon {
+    font-size: 2.4rem;
+    background: white;
+    padding: 10px 14px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(30, 42, 120, 0.06);
+}
+
+/* Restored 3-Column Horizontal Stats Bar */
+.notion-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.stat-box {
+    background: white;
+    padding: 18px 22px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(30, 42, 120, 0.05);
+    border: 1px solid rgba(30, 42, 120, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 0.92rem;
+    color: var(--medium-neutral);
+    font-weight: 600;
+}
+
+.stat-box strong {
+    font-size: 1.6rem;
+    color: var(--royal-indigo);
+}
+
+.notion-creator {
+    background: var(--soft-cream);
+    border-radius: 14px;
+    padding: 16px;
+    border: 1px solid rgba(30, 42, 120, 0.08);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.notion-creator #taskInput {
+    flex: 1 1 100%;
+    padding: 12px 16px;
+    border: 1.5px solid rgba(30, 42, 120, 0.12);
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.notion-creator select,
+.notion-creator input[type="date"] {
+    flex: 1 1 140px;
+    padding: 10px 12px;
+    border: 1.5px solid rgba(30, 42, 120, 0.12);
+    border-radius: 8px;
+    background-color: white;
+    font-size: 0.9rem;
+}
+
+.notion-creator .btn {
+    flex: 0 0 auto;
+    padding: 10px 22px;
+    border-radius: 8px;
+}
+
+/* Aligned Filter Bar */
+.notion-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--soft-cream);
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(30, 42, 120, 0.08);
+}
+
+.filter-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--royal-indigo);
+    margin-right: 4px;
+}
+
+.notion-filter-bar select,
+.notion-filter-bar input[type="date"] {
+    padding: 7px 12px;
+    border: 1px solid rgba(30, 42, 120, 0.15);
+    border-radius: 8px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--dark-neutral);
+    background-color: white;
+    cursor: pointer;
+}
+
+.reset-filter-btn {
+    background-color: white;
+    border: 1px solid rgba(30, 42, 120, 0.2);
+    color: var(--royal-indigo);
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: auto;
+    transition: all 0.2s ease;
+}
+
+.reset-filter-btn:hover {
+    background-color: var(--royal-indigo);
+    color: white;
+}
+
+/* Aligned Notion Table & Non-Wrapping Badges */
+.notion-table-wrapper {
+    overflow-x: auto;
+}
+
+.notion-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 780px; /* Prevents squishing on smaller screens */
+}
+
+.notion-table th {
+    text-align: left;
+    padding: 12px 14px;
+    color: var(--medium-neutral);
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    border-bottom: 2px solid var(--powder-blue);
+    white-space: nowrap;
+}
+
+.notion-table td {
+    padding: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.notion-row.completed .task-title-text {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.notion-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--royal-indigo);
+}
+
+.pill {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    white-space: nowrap; /* Fixes two-line badge wrapping! */
+}
+
+.pill-category { background-color: var(--powder-blue); color: var(--royal-indigo); }
+.pill-week { background-color: #f3e8ff; color: #6b21a8; }
+.pill-high { background-color: #ffebee; color: #c62828; }
+.pill-medium { background-color: #fff8e1; color: #f57f17; }
+.pill-low { background-color: #e3f2fd; color: #1565c0; }
+.status-todo { background-color: #fff3e0; color: #e65100; }
+.status-done { background-color: #e8f5e9; color: #2e7d32; }
+
+.date-text {
+    color: var(--medium-neutral);
+    font-size: 0.85rem;
+    white-space: nowrap; /* Keeps date on 1 line! */
+}
+
+.notion-delete-btn {
+    border: none;
+    background-color: #ffebee;
+    color: #c62828;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.notion-delete-btn:hover {
+    background-color: #c62828;
+    color: white;
+}
+
+/* =========================================================
+   6. CONTACT FORM ALIGNMENT (Full-Width Stacked Inputs)
+   ========================================================= */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--royal-indigo);
+    font-weight: 700;
+    font-size: 0.92rem;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Fixes narrow staircase boxes! */
+    border: 1.5px solid rgba(30, 42, 120, 0.15);
+    border-radius: 10px;
+    padding: 13px 16px;
+    font-size: 0.95rem;
+    background-color: var(--soft-cream);
+    color: var(--dark-neutral);
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    background-color: white;
+    border-color: var(--royal-indigo);
+    box-shadow: 0 0 0 3px rgba(30, 42, 120, 0.1);
+}
+
+.feedback-msg {
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    display: none;
+}
+
+.feedback-msg.error {
+    display: block;
+    background-color: #ffebee;
+    color: #c62828;
+    border-left: 4px solid #c62828;
+}
+
+.feedback-msg.success {
+    display: block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-left: 4px solid #2e7d32;
+}
+
+/* =========================================================
+   7. FOOTER & MOBILE RESPONSIVENESS
+   ========================================================= */
+footer {
+    text-align: center;
+    padding: 26px;
+    background-color: var(--royal-indigo);
+    color: white;
+    margin-top: auto;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--gold);
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        flex-direction: column;
+        gap: 14px;
+        padding: 14px 16px;
+    }
+    .nav-links {
+        justify-content: center;
+        gap: 6px;
+    }
+    .nav-links a {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin: 28px auto;
+        gap: 28px;
+    }
+    .hero-text h1 {
+        font-size: 2.1rem;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+    .two-columns,
+    .projects-grid,
+    .notion-stats {
+        grid-template-columns: 1fr;
+    }
+    .content-card {
+        padding: 20px 16px;
+    }
+    .reset-filter-btn {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+/* =========================================================
+   8. SAMPLE UI HOMEPAGE, ANIMATED WAVE & 2x2 PROJECTS FIX
+   ========================================================= */
+
+/* Soft pastel blue curved backdrop on the left side like the sample UI */
+.home-bg {
+    background: radial-gradient(circle at 18% 45%, #dff1fb 0%, #edf6fc 38%, #f8f9fc 65%, #ffffff 100%);
+}
+
+.gold-dot {
+    color: var(--gold);
+}
+
+/* Gold-tinted pill behind "Hi, I'm Queeneth Okoro" */
+.hero-name-pill {
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(227, 242, 253, 0.9) 0%, rgba(255, 224, 130, 0.55) 100%);
+    padding: 8px 24px;
+    border-radius: 40px;
+    color: var(--royal-indigo);
+    font-size: 2.65rem !important;
+    margin-bottom: 14px !important;
+    box-shadow: 0 4px 15px rgba(30, 42, 120, 0.05);
+}
+
+/* Floating white card for the Brief Biography */
+.hero-bio-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 22px 26px;
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(30, 42, 120, 0.08);
+    border: 1px solid rgba(30, 42, 120, 0.06);
+    margin: 18px 0 26px 0;
+}
+
+.btn-outline-gold {
+    display: inline-block;
+    background: #ffffff;
+    border: 2px solid #d4af37;
+    color: var(--dark-neutral);
+    padding: 12px 26px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.18);
+    transition: all 0.25s ease;
+}
+
+.btn-outline-gold:hover {
+    background: #fffdf5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.28);
+}
+
+/* Animated Wavelike Morphing Backdrop + Sample UI Geometric Accents */
+.portrait-wrapper {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.portrait-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 345px;
+    height: 345px;
+    background: linear-gradient(45deg, #cfe8fc, rgba(251, 192, 45, 0.35));
+    border-radius: 65% 35% 45% 55% / 40% 60% 40% 60%;
+    z-index: -2;
+    animation: rotateWaveShape 14s infinite linear;
+}
+
+@keyframes rotateWaveShape {
+    0% { border-radius: 65% 35% 45% 55% / 40% 60% 40% 60%; transform: rotate(0deg); }
+    50% { border-radius: 45% 55% 65% 35% / 55% 45% 55% 45%; transform: rotate(180deg) scale(1.04); }
+    100% { border-radius: 65% 35% 45% 55% / 40% 60% 40% 60%; transform: rotate(360deg); }
+}
+
+/* Ornate Gold Double-Ring Portrait Frame */
+.gold-ring-frame {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding: 10px;
+    background: linear-gradient(135deg, #f3d27a, #c99e32, #fdf0a6, #b8860b);
+    box-shadow: 0 14px 34px rgba(30, 42, 120, 0.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.gold-ring-frame img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #ffffff !important;
+    background-color: #d6eaf8;
+}
+
+/* Royal Indigo & Yellow Geometric Shapes Around Portrait */
+.geo-shape {
+    position: absolute;
+    z-index: 0;
+    transition: transform 0.4s ease;
+}
+
+.portrait-wrapper:hover .geo-shape {
+    transform: scale(1.08) rotate(8deg);
+}
+
+.shape-indigo-top {
+    width: 75px;
+    height: 75px;
+    background: var(--royal-indigo);
+    border-radius: 16px;
+    top: 12px;
+    left: 10px;
+    transform: rotate(-22deg);
+}
+
+.shape-gold-right {
+    width: 72px;
+    height: 72px;
+    background: #ffeb3b;
+    border-radius: 18px;
+    top: 38px;
+    right: -6px;
+    transform: rotate(18deg);
+    z-index: 3;
+}
+
+.shape-gold-bottom {
+    width: 65px;
+    height: 65px;
+    background: #ffeb3b;
+    border-radius: 14px;
+    bottom: 24px;
+    left: 14px;
+    transform: rotate(25deg);
+}
+
+.shape-indigo-bottom {
+    width: 78px;
+    height: 78px;
+    background: var(--royal-indigo);
+    border-radius: 18px;
+    bottom: 8px;
+    right: 18px;
+    transform: rotate(-15deg);
+}
+
+.geo-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffeb3b;
+    border-radius: 50%;
+    top: 8px;
+     left: 105px;
+}
+
+/* STRICT 2x2 GRID FOR PROJECTS PAGE (2 Columns x 2 Rows) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 28px;
+    margin-top: 20px;
+}
+
+@media (max-width: 850px) {
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .hero-name-pill {
+        font-size: 1.9rem !important;
+    }
+    .portrait-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+    .portrait-wrapper::before {
+        width: 265px;
+        height: 265px;
+    }
+    .gold-ring-frame {
+        width: 230px;
+        height: 230px;
+    }
+}
+/* --- ALIGN HERO TEXT ELEMENTS CLEANLY --- */
+.role-tag {
+    display: table; /* Prevents it from sitting on the same line as the h1 */
+    margin-bottom: 14px;
+}
+
+.hero-subtitle {
+    color: var(--royal-indigo) !important;
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    padding-left: 8px;
+    border-left: 4px solid var(--gold);
+    margin: 6px 0 22px 6px !important;
+    line-height: 1.4;
+}
+/* =========================================================
+   9. ABOUT ME VIDEO INTRODUCTION CARD
+   ========================================================= */
+.about-top-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 3px solid var(--gold);
+    box-shadow: 0 8px 20px rgba(30, 42, 120, 0.12);
+    background-color: var(--royal-indigo);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.video-caption {
+    font-size: 0.85rem;
+    color: var(--medium-neutral);
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media (max-width: 850px) {
+    .about-top-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================================
+   10. TWO-COLUMN CONTACT PAGE STYLING
+   ========================================================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.contact-intro {
+    color: var(--medium-neutral);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    color: var(--royal-indigo);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: var(--gold-hover);
+    text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
