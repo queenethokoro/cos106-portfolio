@@ -1122,3 +1122,149 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* =========================================================
+   11. INTERACTIVE LIGHT / DARK THEME SWITCHER
+   ========================================================= */
+.theme-toggle-btn {
+    background: var(--powder-blue);
+    color: var(--royal-indigo);
+    border: 1.5px solid rgba(30, 42, 120, 0.15);
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.25s ease;
+}
+
+.theme-toggle-btn:hover {
+    background: var(--gold);
+    color: #0f172a;
+    border-color: var(--gold);
+    transform: translateY(-1px);
+}
+
+/* Dark Mode Class (Activated via JavaScript) */
+body.dark-mode,
+body.dark-mode.home-bg {
+    background: linear-gradient(135deg, #0b1120 0%, #162038 100%) !important;
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode header {
+    background: rgba(11, 17, 32, 0.92) !important;
+    border-bottom: 1px solid rgba(251, 192, 45, 0.18) !important;
+}
+
+body.dark-mode .logo-text,
+body.dark-mode .page-container h1,
+body.dark-mode .hero-text h1,
+body.dark-mode .content-card h2,
+body.dark-mode .project-info h3,
+body.dark-mode .stat-box strong,
+body.dark-mode .modal-box h2 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .hero-name-pill {
+    background: linear-gradient(90deg, rgba(30, 42, 120, 0.85) 0%, rgba(251, 192, 45, 0.25) 100%) !important;
+    color: #fbc02d !important;
+}
+
+body.dark-mode .hero-subtitle,
+body.dark-mode .contact-link {
+    color: #fbc02d !important;
+}
+
+body.dark-mode .nav-links a,
+body.dark-mode .subtitle,
+body.dark-mode .hero-text p,
+body.dark-mode .project-info p,
+body.dark-mode .clean-block-list li span,
+body.dark-mode .stat-label,
+body.dark-mode .contact-intro,
+body.dark-mode .video-caption,
+body.dark-mode .date-text,
+body.dark-mode .modal-box p {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #fbc02d !important;
+}
+
+body.dark-mode .nav-links a.active {
+    background: var(--gold-gradient) !important;
+    color: #0f172a !important;
+}
+
+body.dark-mode .theme-toggle-btn {
+    background: #1e293b;
+    color: #fbc02d;
+    border-color: rgba(251, 192, 45, 0.4);
+}
+
+body.dark-mode .content-card,
+body.dark-mode .project-card,
+body.dark-mode .hero-bio-card,
+body.dark-mode .stat-box,
+body.dark-mode .modal-box,
+body.dark-mode .notion-icon {
+    background: #1e293b !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+body.dark-mode .info-table td,
+body.dark-mode .clean-block-list li,
+body.dark-mode .notion-creator,
+body.dark-mode .notion-filter-bar,
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea,
+body.dark-mode .notion-creator input,
+body.dark-mode .notion-creator select,
+body.dark-mode .notion-filter-bar select,
+body.dark-mode .notion-filter-bar input[type="date"] {
+    background-color: #0f172a !important;
+    color: #f1f5f9 !important;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+body.dark-mode .info-table tbody tr:hover td {
+    background-color: #334155 !important;
+    color: #fbc02d !important;
+}
+
+body.dark-mode .info-table td:first-child,
+body.dark-mode .clean-block-list li strong,
+body.dark-mode .form-group label,
+body.dark-mode .filter-title {
+    color: #fbc02d !important;
+}
+
+body.dark-mode .notion-table td {
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-mode .btn,
+body.dark-mode .project-links a.btn-small {
+    background: var(--gold-gradient) !important;
+    color: #0f172a !important;
+}
+
+body.dark-mode .btn-outline-gold,
+body.dark-mode .btn-secondary,
+body.dark-mode .reset-filter-btn {
+    background: #0f172a !important;
+    color: #fbc02d !important;
+    border: 1px solid #fbc02d !important;
+}
+
+body.dark-mode .modal-highlight {
+    background: #0f172a !important;
+    color: #f1f5f9 !important;
+}

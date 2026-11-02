@@ -294,4 +294,38 @@ function openProjectModal(index) {
 function closeProjectModal() {
     const modal = document.getElementById("projectModal");
     if (modal) modal.style.display = "none";
-}ssss
+}
+// =========================================================
+// 4. DARK / LIGHT THEME SWITCHER (With LocalStorage Memory)
+// =========================================================
+function initThemeSwitcher() {
+    const navLinks = document.querySelector(".nav-links");
+    if (!navLinks) return;
+
+    // Create the button automatically in the navbar on all 5 pages
+    const li = document.createElement("li");
+    const themeBtn = document.createElement("button");
+    themeBtn.className = "theme-toggle-btn";
+    themeBtn.id = "themeToggleBtn";
+    li.appendChild(themeBtn);
+    navLinks.appendChild(li);
+
+    // Check if user previously picked Dark Mode
+    const savedTheme = localStorage.getItem("queeneth_theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeBtn.innerHTML = "☀️ Light";
+    } else {
+        themeBtn.innerHTML = "🌙 Dark";
+    }
+
+    // Toggle theme on click and save preference
+    themeBtn.addEventListener("click", function() {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+        localStorage.setItem("queeneth_theme", isDark ? "dark" : "light");
+        themeBtn.innerHTML = isDark ? "☀️ Light" : "🌙 Dark";
+    });
+}
+
+initThemeSwitcher();
