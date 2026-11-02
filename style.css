@@ -1277,3 +1277,13 @@ body.dark-mode .modal-highlight {
     font-size: 1.05rem;
     padding: 8px 14px;
 }
+/* --- REMOVE VERTICAL GOLD BAR & KEEP CLEAN ALIGNMENT --- */
+.hero-subtitle {
+    color: var(--royal-indigo) !important;
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    border-left: none !important;
+    padding-left: 24px !important; /* Matches the left indent of your name above it */
+    margin: 6px 0 22px 0 !important;
+    line-height: 1.4;
+}
