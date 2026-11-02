@@ -1268,3 +1268,12 @@ body.dark-mode .modal-highlight {
     background: #0f172a !important;
     color: #f1f5f9 !important;
 }
+/* --- SHOW ONLY THE GOLD "QO" MONOGRAM BADGE --- */
+.logo-text {
+    display: none !important;
+}
+
+.logo-badge {
+    font-size: 1.05rem;
+    padding: 8px 14px;
+}
