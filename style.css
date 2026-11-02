@@ -1532,3 +1532,68 @@ html.dark-mode-html body {
         box-shadow: 0 4px 12px rgba(251, 192, 45, 0.25) !important;
     }
 }
+/* =========================================================
+   14. TABLET & SPLIT-SCREEN RESPONSIVE FIX
+   ========================================================= */
+@media (max-width: 1024px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 0 16px;
+        margin: 20px auto;
+        gap: 24px;
+    }
+
+    .hero-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-name-pill {
+        font-size: 2.1rem !important;
+        padding: 6px 18px !important;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        text-align: center;
+        padding-left: 0 !important;
+        border-left: none !important;
+        margin: 6px auto 18px auto !important;
+        font-size: 1.1rem !important;
+    }
+
+    .role-tag {
+        margin: 0 auto 12px auto;
+    }
+
+    .hero-bio-card {
+        text-align: left; /* Keeps your bio readable inside the card */
+        width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        padding: 12px 18px !important;
+    }
+
+    .mobile-menu-btn {
+        display: flex !important;
+    }
+
+    .hero-name-pill {
+        font-size: 1.75rem !important;
+        padding: 6px 14px !important;
+    }
+}
