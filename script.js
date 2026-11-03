@@ -394,3 +394,35 @@ function initModernUI() {
 }
 
 initModernUI();
+// =========================================================
+// 5. DYNAMIC JAVASCRIPT SCROLL-REVEAL ANIMATION
+// =========================================================
+function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll(
+        ".content-card, .project-card, .hero-bio-card, .stat-box"
+    );
+
+    const observerOptions = {
+        threshold: 0.12, // Triggers when 12% of the card is visible
+        rootMargin: "0px 0px -30px 0px"
+    };
+
+    const scrollObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry, index) {
+            if (entry.isIntersecting) {
+                // Staggered delay for smooth cascading effect
+                setTimeout(function() {
+                    entry.target.classList.add("js-scroll-visible");
+                }, index * 90);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    animatedElements.forEach(function(el) {
+        el.classList.add("js-scroll-hidden");
+        scrollObserver.observe(el);
+    });
+}
+
+initScrollAnimations();
