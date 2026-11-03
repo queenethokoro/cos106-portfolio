@@ -1597,3 +1597,16 @@ html.dark-mode-html body {
         padding: 6px 14px !important;
     }
 }
+/* =========================================================
+   15. JAVASCRIPT DYNAMIC SCROLL-REVEAL CLASSES
+   ========================================================= */
+.js-scroll-hidden {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.js-scroll-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
