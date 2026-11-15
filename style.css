@@ -1610,3 +1610,17 @@ html.dark-mode-html body {
     opacity: 1;
     transform: translateY(0);
 }
+/* --- UPDATED 4:5 VIDEO RATIO FIX --- */
+.video-wrapper {
+    max-width: 340px;
+    margin: 12px auto 0 auto;
+    aspect-ratio: 4 / 5;
+}
+
+.video-wrapper video {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 4 / 5 !important;
+    object-fit: cover !important;
+    display: block;
+}
