@@ -1,11 +1,11 @@
-# 🎓 Student Portfolio & Academic Management Platform (COS 106)
+# Student Portfolio & Academic Management Platform (COS 106)
 
 A responsive, multi-page personal academic portfolio and student task management web application designed and developed for the **COS 106 (Introduction to Web Technologies)** Lab Assessment at **Miva Open University**.
 
 
 
 
-## 👤 Student Information
+## Student Information
 **Full Name:** Queeneth Nsirimobi Okoro
 
 **Matriculation Number:** 2025/A/DSC/0203
@@ -19,14 +19,14 @@ A responsive, multi-page personal academic portfolio and student task management
 
 
 
-## 🔗 Live Project Links
+## Live Project Links
 **🌐 Live Hosted Website (GitHub Pages):** https://queenethokoro.github.io/cos106-portfolio/
 
 **💻 GitHub Repository:** https://github.com/queenethokoro/cos106-portfolio
 
 
 
-## 📌 Project Overview
+## Project Overview
 This platform serves a dual purpose:
 1. **Executive Academic & Professional Portfolio:** Showcases academic credentials, 9+ industry certifications, technical competencies in Data Science and Product Design, an HTML5 video introduction pitch, and interactive project case studies.
    
@@ -35,7 +35,7 @@ This platform serves a dual purpose:
 
 
 
-## 📂 Multi-Page Architecture (5 Pages)
+## Multi-Page Architecture (5 Pages)
 **`index.html` (Homepage):** Hero section with custom geometric portrait frame, welcome badge, biography summary, and quick-action navigation buttons.
 
 **`about.html` (About Me):** Career aspirations, playable HTML5 `<video>` introduction (`intro-video.mp4`), structured academic/certification tables, and categorized skill blocks.
@@ -49,7 +49,7 @@ This platform serves a dual purpose:
 
 
 
-## 🛠️ Technologies & Technical Compliance
+## Technologies & Technical Compliance
 
 ### 1. HTML5 Requirements Implemented
 a.  Semantic structural tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`)
@@ -90,7 +90,7 @@ e. **Scroll-Reveal Dynamic Animations:** Uses the browser `IntersectionObserver`
 
 
 
-## 🚀 How to Run Locally
+## How to Run Locally
 Clone or download this repository:
    ```bash
 https://github.com/queenethokoro/cos106-portfolio.git
