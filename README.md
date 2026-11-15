@@ -22,15 +22,20 @@ A responsive, multi-page personal academic portfolio and student task management
 ## 📌 Project Overview
 This platform serves a dual purpose:
 1. **Executive Academic & Professional Portfolio:** Showcases academic credentials, 9+ industry certifications, technical competencies in Data Science and Product Design, an HTML5 video introduction pitch, and interactive project case studies.
+   
 2. **Interactive Student Task Management System:** Provides a client-side **Academic Planner** backed by browser `localStorage` that allows students to create, categorize, filter, complete, and delete academic tasks in real time.
 
 
 
 ## 📂 Multi-Page Architecture (5 Pages)
 **`index.html` (Homepage):** Hero section with custom geometric portrait frame, welcome badge, biography summary, and quick-action navigation buttons.
+
 **`about.html` (About Me):** Career aspirations, playable HTML5 `<video>` introduction (`intro-video.mp4`), structured academic/certification tables, and categorized skill blocks.
+
 **`projects.html` (Projects):** Responsive 2x2 portfolio grid showcasing four EdTech, Product Design, and Brand Leadership projects with live Figma/Canva links and an interactive JavaScript Case-Study Modal.
+
 **`planner.html` (Academic Planner):** Full CRUD task manager with real-time summary counters (*Total*, *Completed*, *Pending*) and multi-criteria filtering (*Status*, *Category*, *Due Date*).
+
 **`contact.html` (Contact):** Direct professional contact channels paired with a client-side Regex-validated message form.
 
 
