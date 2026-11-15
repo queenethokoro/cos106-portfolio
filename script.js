@@ -386,7 +386,7 @@ function initModernUI() {
                 </div>
 
                 <div class="footer-bottom">
-                    <p>&copy; 2026 Queeneth Okoro. All Rights Reserved | COS 106 Term Project</p>
+                    <p>&copy; 2026 Queeneth Okoro. All Rights Reserved | COS 106 Lab Assessment</p>
                 </div>
             </div>
         `;
