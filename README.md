@@ -7,9 +7,13 @@ A responsive, multi-page personal academic portfolio and student task management
 
 ## 👤 Student Information
 **Full Name:** Queeneth Nsirimobi Okoro
+
 **Matriculation Number:** 2025/A/DSC/0203
+
 **Department / Programme:** B.Sc. Data Science
+
 **University Email:** q.okoro3921@miva.edu.ng
+
 **Course Code:** COS 106 — Introduction to Web Technologies
 
 
