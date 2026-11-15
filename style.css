@@ -1610,17 +1610,21 @@ html.dark-mode-html body {
     opacity: 1;
     transform: translateY(0);
 }
-/* --- UPDATED 4:5 VIDEO RATIO FIX --- */
+/* --- FORCE 4:5 PORTRAIT VIDEO FRAME --- */
+.video-card .video-wrapper,
 .video-wrapper {
-    max-width: 340px;
-    margin: 12px auto 0 auto;
-    aspect-ratio: 4 / 5;
+    width: 100% !important;
+    max-width: 320px !important;
+    height: 400px !important; /* Exact 4:5 ratio (320px wide by 400px tall) */
+    margin: 14px auto 0 auto !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
 }
 
+.video-card .video-wrapper video,
 .video-wrapper video {
     width: 100% !important;
-    height: 100% !important;
-    aspect-ratio: 4 / 5 !important;
+    height: 400px !important;
     object-fit: cover !important;
-    display: block;
+    display: block !important;
 }
