@@ -44,27 +44,38 @@ This platform serves a dual purpose:
 
 ### 1. HTML5 Requirements Implemented
 a.  Semantic structural tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`)
+
 b.  Interactive validated `<form>` controls (`planner.html`, `contact.html`)
+
 c.  Relational data `<table>` structures with `<thead>` and `<tbody>` (`about.html`, `planner.html`)
+
 d.  Custom `<video>` multimedia player with metadata preloading (`about.html`)
+
 e.  Accessible images, unordered lists (`<ul>`), and internal/external hyperlinks (`<a>`)
 
 ### 2. CSS3 Requirements Implemented (`style.css`)
 a. Centralized external stylesheet using `:root` CSS Custom Properties (**Royal Indigo `#1e2a78`** & **Gold `#fbc02d`** palette)
+
 b. Responsive **CSS Grid** and **Flexbox** layouts
+
 c. Multi-breakpoint `@media` queries (`1024px` tablet/split-screen and `850px` mobile drawer)
+
 d. Smooth keyframe animations, hover micro-interactions, and Dark/Light theme styling
 
 ### 3. JavaScript (ES6+) Features Implemented (`script.js`)
 a. **Persistent Academic Task Manager:** Uses arrays of objects, `.forEach()`, `.filter()`, DOM manipulation, and `localStorage` (`JSON.stringify` / `JSON.parse`) to add, toggle, filter, and delete tasks.
+
 b. **Client-Side Form Validation:** Intercepts form submission (`event.preventDefault()`) and validates non-empty inputs, valid email format (`/^\S+@\S+\.\S+$/`), and numeric-only phone numbers (`/^\d+$/`).
+
 c. **Interactive Case-Study Modal System:** Dynamically populates project details from a JavaScript object dictionary into a popup modal overlay.
+
 d. **Zero-Flash Dark/Light Theme Engine & Mobile Drawer:** Persists user theme preference in `localStorage` across all 5 pages and controls the floating mobile hamburger navigation card.
+
 e. **Scroll-Reveal Dynamic Animations:** Uses the browser `IntersectionObserver` API to smoothly animate cards into view on scroll.
 
 
 
 ## 🚀 How to Run Locally
-1. Clone or download this repository:
+Clone or download this repository:
    ```bash
-   git clone [https://github.com/queenethokoro/cos106-portfolio.git](https://github.com/queenethokoro/cos106-portfolio.git)
+https://github.com/queenethokoro/cos106-portfolio.git
